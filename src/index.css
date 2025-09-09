@@ -1,3 +1,4 @@
+/* Сброс стилей */
 * {
   margin: 0;
   padding: 0;
@@ -22,7 +23,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #000;
   color: #fff;
-  /* Ультра-плавный скролл */
+  /* Плавный скролл (работает везде) */
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
 }
