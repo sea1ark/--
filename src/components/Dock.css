@@ -1,3 +1,4 @@
+/* Внешний контейнер док-панели */
 .dock-outer {
   margin: 0 0.5rem;
   display: flex;
@@ -10,6 +11,7 @@
   z-index: 1000;
 }
 
+/* Панель док-панели */
 .dock-panel {
   display: flex;
   align-items: flex-end;
@@ -21,9 +23,9 @@
   border: 1px solid rgba(34, 34, 34, 0.8);
   padding: 0 0.5rem 0.5rem;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-  /* Убираю transition для всего dock - он должен оставаться статичным */
 }
 
+/* Элементы док-панели */
 .dock-item {
   position: relative;
   display: inline-flex;
@@ -44,15 +46,17 @@
   background-color: rgba(6, 0, 16, 0.9);
   border-color: rgba(167, 239, 158, 0.5);
   box-shadow: 0 8px 25px rgba(167, 239, 158, 0.2);
-  /* Убираю transform - карточки не должны подниматься */
+
 }
 
+/* Иконки в док-панели */
 .dock-icon {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+/* Подписи элементов док-панели */
 .dock-label {
   position: absolute;
   top: -1.5rem;

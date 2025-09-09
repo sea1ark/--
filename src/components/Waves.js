@@ -1,7 +1,7 @@
 import { useRef, useEffect } from 'react';
 import './Waves.css';
 
-// Класс для генерации градиентов Perlin noise
+// Класс для работы с градиентами (Perlin noise)
 
 class Grad {
   constructor(x, y, z) {

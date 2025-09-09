@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Settings.css';
 
+// Страница настроек приложения
 const Settings = () => {
   const [darkMode, setDarkMode] = useState(true);
   const [animations, setAnimations] = useState(true);
@@ -9,17 +10,17 @@ const Settings = () => {
   return (
     <div className="settings-page">
       <div className="settings-header">
-        <h1 className="settings-title">Settings</h1>
-        <p className="settings-subtitle">Customize your experience</p>
+        <h1 className="settings-title">Настройки</h1>
+        <p className="settings-subtitle">Настройте свой опыт</p>
       </div>
       
       <div className="settings-content">
         <div className="settings-section">
-          <h2>Appearance</h2>
+          <h2>Внешний вид</h2>
           <div className="setting-item">
             <div className="setting-info">
-              <label>Dark Mode</label>
-              <span>Switch between light and dark themes</span>
+              <label>Темная тема</label>
+              <span>Переключение между светлой и темной темами</span>
             </div>
             <div className="toggle-switch">
               <input
@@ -34,8 +35,8 @@ const Settings = () => {
           
           <div className="setting-item">
             <div className="setting-info">
-              <label>Animations</label>
-              <span>Enable smooth transitions and effects</span>
+              <label>Анимации</label>
+              <span>Включить плавные переходы и эффекты</span>
             </div>
             <div className="toggle-switch">
               <input
@@ -50,11 +51,11 @@ const Settings = () => {
         </div>
         
         <div className="settings-section">
-          <h2>Notifications</h2>
+          <h2>Уведомления</h2>
           <div className="setting-item">
             <div className="setting-info">
-              <label>Push Notifications</label>
-              <span>Receive updates and alerts</span>
+              <label>Push уведомления</label>
+              <span>Получать обновления и оповещения</span>
             </div>
             <div className="toggle-switch">
               <input
@@ -69,21 +70,21 @@ const Settings = () => {
         </div>
         
         <div className="settings-section">
-          <h2>Performance</h2>
+          <h2>Производительность</h2>
           <div className="setting-item">
             <div className="setting-info">
-              <label>Hardware Acceleration</label>
-              <span>Use GPU for better performance</span>
+              <label>Аппаратное ускорение</label>
+              <span>Использовать GPU для лучшей производительности</span>
             </div>
-            <div className="setting-value">Enabled</div>
+            <div className="setting-value">Включено</div>
           </div>
           
           <div className="setting-item">
             <div className="setting-info">
-              <label>Cache Size</label>
-              <span>Storage used for temporary files</span>
+              <label>Размер кэша</label>
+              <span>Хранилище для временных файлов</span>
             </div>
-            <div className="setting-value">256 MB</div>
+            <div className="setting-value">256 МБ</div>
           </div>
         </div>
       </div>

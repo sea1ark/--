@@ -2,7 +2,7 @@ import { Renderer, Program, Mesh, Color, Triangle } from 'ogl';
 import { useEffect, useRef, useMemo, useCallback } from 'react';
 import './FaultyTerminal.css';
 
-// WebGL шейдеры для создания эффекта терминала
+/* WebGL шейдеры для создания эффекта терминала*/
 
 const vertexShader = `
 attribute vec2 position;
@@ -210,16 +210,19 @@ void main() {
 }
 `;
 
-// Конвертация hex цвета в RGB
+/* Конвертация hex цвета в RGB */
+// Простая конвертация hex в RGB (как делают разработчики)
 function hexToRgb(hex) {
   let h = hex.replace('#', '').trim();
-  if (h.length === 3)
-    h = h
-      .split('')
-      .map(c => c + c)
-      .join('');
+  if (h.length === 3) {
+    h = h.split('').map(c => c + c).join('');
+  }
   const num = parseInt(h, 16);
-  return [((num >> 16) & 255) / 255, ((num >> 8) & 255) / 255, (num & 255) / 255];
+  return [
+    ((num >> 16) & 255) / 255, 
+    ((num >> 8) & 255) / 255, 
+    (num & 255) / 255
+  ];
 }
 
 export default function FaultyTerminal({

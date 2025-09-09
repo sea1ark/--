@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
 import './App.css';
 import FaultyTerminal from './components/FaultyTerminal';
@@ -13,35 +13,56 @@ import Settings from './pages/Settings';
 function AppContent() {
   const [currentEffect, setCurrentEffect] = useState('terminal');
   const [demoContentEnabled, setDemoContentEnabled] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
   const navigate = useNavigate();
 
+  // Простая загрузка
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoaded(true);
+    }, 300);
+    return () => clearTimeout(timer);
+  }, []);
+
+  // Настройки док-панели (личные предпочтения)
   const dockItems = [
     { 
       icon: <VscHome size={18} />, 
-      label: 'Home', 
+      label: 'Главная', 
       onClick: () => navigate('/') 
     },
     { 
       icon: <VscArchive size={18} />, 
-      label: 'Archive', 
+      label: 'Архив', 
       onClick: () => navigate('/archive') 
     },
     { 
       icon: <VscAccount size={18} />, 
-      label: 'Profile', 
+      label: 'Профиль', 
       onClick: () => navigate('/profile') 
     },
     { 
       icon: <VscSettingsGear size={18} />, 
-      label: 'Settings', 
+      label: 'Настройки', 
       onClick: () => navigate('/settings') 
     },
   ];
 
+  // Переключение эффектов (работает сразу)
   const toggleDemoContent = () => {
     setDemoContentEnabled(prev => !prev);
     setCurrentEffect(prev => prev === 'terminal' ? 'waves' : 'terminal');
   };
+
+  // Экран загрузки
+  if (!isLoaded) {
+    return (
+      <div className="loading-screen">
+        <div className="loading-spinner"></div>
+        <p>Загрузка...</p>
+      </div>
+    );
+  }
 
   return (
     <div className="App">
@@ -61,7 +82,7 @@ function AppContent() {
             chromaticAberration={0.1}
             dither={0.3}
             curvature={0.1}
-            tint="#8fdf7e"
+            tint="#00ff88"
             mouseReact={true}
             mouseStrength={0.6}
             pageLoadAnimation={true}
@@ -69,8 +90,8 @@ function AppContent() {
           />
         ) : (
           <Waves
-            lineColor="#8fdf7e"
-            backgroundColor="rgba(143, 223, 126, 0.1)"
+            lineColor="#00ffff"
+            backgroundColor="rgba(0, 255, 136, 0.1)"
             waveSpeedX={0.02}
             waveSpeedY={0.01}
             waveAmpX={40}

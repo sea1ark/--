@@ -1,7 +1,7 @@
 {
-  "name": "interactive-portfolio",
+  "name": "my-portfolio",
   "version": "1.0.0",
-  "description": "Современное портфолио с интерактивными эффектами и анимациями",
+  "description": "Мой портфолио с крутыми эффектами",
   "main": "index.js",
   "scripts": {
     "start": "react-scripts start",

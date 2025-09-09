@@ -1,27 +1,28 @@
 import React from 'react';
 import './Home.css';
 
+// Главная страница портфолио
 const Home = () => {
   return (
     <div className="home-page">
       <div className="home-hero">
-        <h1 className="home-title">Welcome Home</h1>
-        <p className="home-subtitle">Your digital sanctuary awaits</p>
+        <h1 className="home-title">Добро пожаловать</h1>
+        <p className="home-subtitle">Мое портфолио с крутыми эффектами</p>
         <div className="home-features">
           <div className="feature-card">
             <div className="feature-icon">🏠</div>
-            <h3>Comfort</h3>
-            <p>Find everything you need in one place</p>
+            <h3>Удобство</h3>
+            <p>Все что нужно в одном месте</p>
           </div>
           <div className="feature-card">
             <div className="feature-icon">⚡</div>
-            <h3>Speed</h3>
-            <p>Lightning-fast navigation and interactions</p>
+            <h3>Скорость</h3>
+            <p>Быстрая навигация и взаимодействие</p>
           </div>
           <div className="feature-card">
             <div className="feature-icon">🎨</div>
-            <h3>Beauty</h3>
-            <p>Stunning visual effects and animations</p>
+            <h3>Красота</h3>
+            <p>Крутые визуальные эффекты и анимации</p>
           </div>
         </div>
       </div>

@@ -2,7 +2,7 @@ import { motion, useMotionValue, useSpring, useTransform, AnimatePresence } from
 import { Children, cloneElement, useEffect, useMemo, useRef, useState } from 'react';
 import './Dock.css';
 
-// Компонент элемента док-панели с анимацией
+/* Элемент док-панели (анимация при наведении) */
 
 function DockItem({ children, className = '', onClick, mouseX, spring, distance, magnification, baseItemSize }) {
   const ref = useRef(null);
@@ -41,7 +41,7 @@ function DockItem({ children, className = '', onClick, mouseX, spring, distance,
   );
 }
 
-// Компонент подписи для элементов док-панели
+/* Компонент подписи для элементов док-панели */
 function DockLabel({ children, className = '', ...rest }) {
   const { isHovered } = rest;
   const [isVisible, setIsVisible] = useState(false);
@@ -72,7 +72,7 @@ function DockLabel({ children, className = '', ...rest }) {
   );
 }
 
-// Компонент иконки для элементов док-панели
+/* Компонент иконки для элементов док-панели */
 function DockIcon({ children, className = '' }) {
   return <div className={`dock-icon ${className}`}>{children}</div>;
 }

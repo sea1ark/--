@@ -1,52 +1,53 @@
 import React from 'react';
 import './Archive.css';
 
+// Страница архива с демо эффектов
 const Archive = () => {
   return (
     <div className="archive-page">
       <div className="archive-header">
-        <h1 className="archive-title">Archive</h1>
-        <p className="archive-subtitle">Your digital memories and collections</p>
+        <h1 className="archive-title">Архив</h1>
+        <p className="archive-subtitle">Мои работы и коллекции</p>
       </div>
       
       <div className="fluid-glass-demo">
-        <h2 className="demo-title">Fluid Glass Effect</h2>
+        <h2 className="demo-title">Стеклянный эффект</h2>
         <p className="demo-description">
-          Experience the smooth, glassmorphic design that adapts to your interactions
+          Плавный glassmorphic дизайн, который адаптируется к взаимодействиям
         </p>
         
         <div className="glass-cards">
           <div className="glass-card">
-            <h3>Card 1</h3>
-            <p>This card demonstrates the fluid glass effect with backdrop blur and transparency.</p>
-            <button className="glass-button">Learn More</button>
+            <h3>Карточка 1</h3>
+            <p>Демонстрация стеклянного эффекта с размытием фона и прозрачностью.</p>
+            <button className="glass-button">Узнать больше</button>
           </div>
           
           <div className="glass-card">
-            <h3>Card 2</h3>
-            <p>Hover over this card to see the smooth animations and glass effects.</p>
-            <button className="glass-button">Explore</button>
+            <h3>Карточка 2</h3>
+            <p>Наведите курсор, чтобы увидеть плавные анимации и стеклянные эффекты.</p>
+            <button className="glass-button">Исследовать</button>
           </div>
           
           <div className="glass-card">
-            <h3>Card 3</h3>
-            <p>Each card has its own unique glassmorphic styling and interactions.</p>
-            <button className="glass-button">Discover</button>
+            <h3>Карточка 3</h3>
+            <p>Каждая карточка имеет свой уникальный glassmorphic стиль и взаимодействия.</p>
+            <button className="glass-button">Открыть</button>
           </div>
         </div>
         
         <div className="glass-stats">
           <div className="stat-item">
             <span className="stat-number">99.9%</span>
-            <span className="stat-label">Smooth</span>
+            <span className="stat-label">Плавность</span>
           </div>
           <div className="stat-item">
             <span className="stat-number">60fps</span>
-            <span className="stat-label">Performance</span>
+            <span className="stat-label">Производительность</span>
           </div>
           <div className="stat-item">
             <span className="stat-number">∞</span>
-            <span className="stat-label">Possibilities</span>
+            <span className="stat-label">Возможности</span>
           </div>
         </div>
       </div>
