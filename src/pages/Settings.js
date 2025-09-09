@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Settings.css';
 
-// Страница настроек приложения
+// Страница настроек приложения (базовая функциональность)
 const Settings = () => {
   const [darkMode, setDarkMode] = useState(true);
   const [animations, setAnimations] = useState(true);

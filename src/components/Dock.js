@@ -14,7 +14,7 @@ function DockItem({ children, className = '', onClick, mouseX, spring, distance,
       width: baseItemSize
     };
     return val - rect.x - baseItemSize / 2;
-  });
+  }); // FIXME: иногда глючит на мобильных
 
   const targetSize = useTransform(mouseDistance, [-distance, 0, distance], [baseItemSize, magnification, baseItemSize]);
   const size = useSpring(targetSize, spring);

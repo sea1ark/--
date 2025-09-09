@@ -16,7 +16,7 @@ function AppContent() {
   const [isLoaded, setIsLoaded] = useState(false);
   const navigate = useNavigate();
 
-  // Простая загрузка
+  // Простая загрузка (костыль для демо)
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoaded(true);

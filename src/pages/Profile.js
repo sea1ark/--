@@ -1,7 +1,7 @@
 import React from 'react';
 import './Profile.css';
 
-// Страница профиля пользователя
+// Страница профиля пользователя (пока статичная)
 const Profile = () => {
   return (
     <div className="profile-page">

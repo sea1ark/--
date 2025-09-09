@@ -20,7 +20,7 @@ const Home = () => {
             <p>Быстрая навигация и взаимодействие</p>
           </div>
           <div className="feature-card">
-            <div className="feature-icon">🎨</div>
+            <div className="feature-icon">🎨 </div>
             <h3>Красота</h3>
             <p>Крутые визуальные эффекты и анимации</p>
           </div>

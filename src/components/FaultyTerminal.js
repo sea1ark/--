@@ -269,7 +269,7 @@ export default function FaultyTerminal({
     const x = (e.clientX - rect.left) / rect.width;
     const y = 1 - (e.clientY - rect.top) / rect.height;
     mouseRef.current = { x, y };
-  }, []);
+  }, []); // TODO: оптимизировать позже
 
   useEffect(() => {
     const ctn = containerRef.current;

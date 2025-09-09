@@ -1,7 +1,7 @@
 import React from 'react';
 import './Archive.css';
 
-// Страница архива с демо эффектов
+// архив демо эффект (в разработке)
 const Archive = () => {
   return (
     <div className="archive-page">

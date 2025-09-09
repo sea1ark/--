@@ -5,7 +5,7 @@
   overflow: hidden;
 }
 
-/* Экран загрузки */
+/* Экран загрузки (временное решение) */
 .loading-screen {
   position: fixed;
   top: 0;
